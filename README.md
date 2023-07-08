@@ -15,7 +15,7 @@ git switch -  # 一つ前のブランチに移動
 git switch <b>  # bブランチに移動
 git branch -m <b> <new b>  # bブランチの名前を変更
 
-git push origin <b>  # bブランチをリモートにpush
+git push <remote> <b>  # bブランチをリモートにpush
 git branch -D <b>  # bブランチを削除
 git fetch --prune  # リモートのbranch情報をローカルに反映（PRをマージした後とか）
 ```
@@ -58,6 +58,8 @@ git rm --cached <file>  # 一度addしたファイルを追跡対象外にする
 ```bash
 git tag
 git tag -a <tag name> -m <msg>
+git push <remote> <tag name>
+git push <remote> --tag
 ```
 ref
 - https://qiita.com/MahoTakara/items/3a7fe950e91b8e51f8b8

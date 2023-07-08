@@ -53,3 +53,12 @@ ref（resetとrevertの違い）
 git rm
 git rm --cached <file>  # 一度addしたファイルを追跡対象外にする．これしないと，gitignore効かない
 ```
+
+## タグ
+```bash
+git tag
+git tag -a <tag name> -m <msg>
+```
+ref
+- https://qiita.com/MahoTakara/items/3a7fe950e91b8e51f8b8
+- https://qiita.com/Kasumin0123/items/5aeb3bae22723bc3bb26

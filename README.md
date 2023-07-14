@@ -18,6 +18,7 @@ git branch -m <b> <new b>  # bブランチの名前を変更
 git push <remote> <b>  # bブランチをリモートにpush
 git branch -D <b>  # bブランチを削除
 git fetch --prune  # リモートのbranch情報をローカルに反映（PRをマージした後とか）
+git pull origin <REMOTE-BRANCH-NAME>:<LOCAL-BRANCH-NAME>  # 特定のローカルブランチに特定のリモートブランチの差分をpullする
 ```
 
 ## 設定

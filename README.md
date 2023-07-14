@@ -25,8 +25,8 @@ git pull origin <REMOTE-BRANCH-NAME>:<LOCAL-BRANCH-NAME>  # 特定のローカ�
 ```bash
 git config --list
 # 初期設定
-git config --global user.name = hoge
-git config --global user.email = hoge@piyo.com
+git config --global user.name "hoge"
+git config --global user.email hoge@piyo.com
 ```
 
 ## 一時退避

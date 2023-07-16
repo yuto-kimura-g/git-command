@@ -14,11 +14,11 @@ git switch -c <new b>  # bブランチを作成して移動
 git switch -  # 一つ前のブランチに移動
 git switch <b>  # bブランチに移動
 git branch -m <b> <new b>  # bブランチの名前を変更
-
-git push <remote> <b>  # bブランチをリモートにpush
 git branch -D <b>  # bブランチを削除
+git push <remote> <b>  # bブランチをリモートにpush
 git fetch --prune  # リモートのbranch情報をローカルに反映（PRをマージした後とか）
-git pull origin <REMOTE-BRANCH-NAME>:<LOCAL-BRANCH-NAME>  # 特定のローカルブランチに特定のリモートブランチの差分をpullする
+git fetch origin <remote b>  # リモートあるブランチ（自分以外の人が作ったやつとか）をローカルにfetch
+git merge --no-ff <remote>/<remote b>  # 作業中のブランチに，remoteのブランチを取り込む
 ```
 
 ## 設定

@@ -41,8 +41,8 @@ git stash drop  # stashを消す
 
 ## 取り消し
 ```bash
-git reset
-git revert
+git reset  # 修正履歴を残さない
+git revert  # 修正履歴を残す
 git commit --amend  # コミットを取り消し
 ```
 ref（resetとrevertの違い）

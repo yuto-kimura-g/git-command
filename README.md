@@ -15,6 +15,9 @@ git switch -  # 一つ前のブランチに移動
 git switch <b>  # bブランチに移動
 git branch -m <b> <new b>  # bブランチの名前を変更
 git branch -D <b>  # bブランチを削除
+git branch -a  # ローカル，リモート，全てのブランチを表示
+git branch -u <remote>/<remote b> <b> # bブランチが追跡するリモートブランチ(upstream)を設定
+git branch -vv  # ローカルブランチが追跡するリモートブランチ(upstream)を表示．`.git/config`ファイルで確認することも出来る
 git push <remote> <b>  # bブランチをリモートにpush
 git fetch --prune  # リモートのbranch情報をローカルに反映（PRをマージした後とか）
 git fetch origin <remote b>  # リモートあるブランチ（自分以外の人が作ったやつとか）をローカルにfetch

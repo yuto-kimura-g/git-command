@@ -4,6 +4,17 @@
 
 キーワードだけ書いてるので，それで思い出せなければぐぐる
 
+## 初期化
+```bash
+git remote add <remote> <URL.git>  # ローカルにリモートを追加
+# GitHubでレポジトリを作って，ローカルのフォルダを紐づけようとした時，祖先が一致してないよ，と怒られる．
+# git init して
+# git pull したら
+#   fatal: refusing to merge unrelated histories と言われる
+# allow-unrelated で許してもらう
+git pull --allow-unrelated-histories origin main
+```
+
 ## ブランチ
 ```bash
 # git checkout は非推奨
@@ -30,6 +41,8 @@ git config --list
 # 初期設定
 git config --global user.name "hoge"
 git config --global user.email hoge@piyo.com
+git config --global core.editor "vim"
+git config --global init.defaultbranch "main"
 ```
 
 ## 一時退避

@@ -14,6 +14,11 @@ git remote add <remote> <URL.git>  # ローカルにリモートを追加
 # allow-unrelated で許してもらう
 git pull --allow-unrelated-histories origin main
 ```
+ちなみに，
+```bash
+git remote -v # リモート一覧を確認
+git remote remove <remote>  # リモートとの紐づけを解除
+```
 
 ## ブランチ
 ```bash

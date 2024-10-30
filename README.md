@@ -4,23 +4,29 @@
 
 キーワードだけ書いてるので，それで思い出せなければぐぐる
 
-## 初期化
+## remoteの追加
 ```bash
 git remote add <remote> <URL.git>  # ローカルにリモートを追加
+
+# 一般的に，<remote>はorigin,upstreamとすることが多い
+git remote add origin ...
+git remote add upstream ...
+# ここで，upstreamに直接pushしたくない時は，URLの部分にダミー文字列を入れておく
+git remote set-url --push upstream dummy-url-dayo
+
 # GitHubでレポジトリを作って，ローカルのフォルダを紐づけようとした時，祖先が一致してないよ，と怒られる．
 # git init して
 # git pull したら
 #   fatal: refusing to merge unrelated histories と言われる
 # allow-unrelated で許してもらう
 git pull --allow-unrelated-histories origin main
-```
-ちなみに，
-```bash
+
+ちなみに
 git remote -v # リモート一覧を確認
 git remote remove <remote>  # リモートとの紐づけを解除
 ```
 
-## ブランチ
+## branch操作
 ```bash
 # git checkout は非推奨
 # git switch を使う

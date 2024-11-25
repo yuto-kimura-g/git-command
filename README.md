@@ -4,6 +4,8 @@
 
 キーワードだけ書いてるので，それで思い出せなければぐぐる
 
+（毎回その場しのぎでやってきたけど，そろそろ体系的に学び直した方が良いかもしれない）
+
 ## remoteの追加
 ```bash
 git remote add <remote> <URL.git>  # ローカルにリモートを追加
@@ -20,6 +22,8 @@ git remote set-url --push upstream dummy-url-dayo
 #   fatal: refusing to merge unrelated histories と言われる
 # allow-unrelated で許してもらう
 git pull --allow-unrelated-histories origin main
+# または
+git pull --rebase
 
 ちなみに
 git remote -v # リモート一覧を確認
@@ -42,8 +46,9 @@ git branch -u <remote>/<remote b> <b> # bブランチが追跡するリモート
 git branch -vv  # ローカルブランチが追跡するリモートブランチ(upstream)を表示．`.git/config`ファイルで確認することも出来る
 git push <remote> <b>  # bブランチをリモートにpush
 git fetch --prune  # リモートのbranch情報をローカルに反映（PRをマージした後とか）
-git fetch origin <remote b>  # リモートあるブランチ（自分以外の人が作ったやつとか）をローカルにfetch
+git fetch <remote> (<remote b>)  # リモート（全体または，特定のブランチ）をローカルにfetch
 git merge --no-ff <remote>/<remote b>  # 作業中のブランチに，remoteのブランチを取り込む
+git rebase <remote>/<remote b> # 作業中のブランチに，remoteのブランチを取り込む
 ```
 
 ## 設定
